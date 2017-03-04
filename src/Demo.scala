@@ -1,4 +1,4 @@
-class FirstBean(val anyText: String){
+class ParentClass(val anyText: String){
   var anyInnerText: String = anyText
   
   def firstMethod(otherText: String){
@@ -15,7 +15,7 @@ object Demo {
   def main(args: Array[String]){
     println("Hello Scala !");
     
-    val firstBean = new FirstBean("my text");
+    val firstBean = new ParentClass("my text");
     firstBean.firstMethod("other Text");
     
     println("Print " + peremMutable);
@@ -24,6 +24,9 @@ object Demo {
     printVariable("A1","A2");
     printVariable(peremMutable, peremImMutable);
     peremMutable = "Peremennaya 1 - changed";
+    
+    val childClass = new ChildClass("ChildClass p1", "ChildClass p2");
+    childClass.firstMethod("ChildClass.firstMethod()");
   }
 
   def printVariable(p1: String, p2: String){
