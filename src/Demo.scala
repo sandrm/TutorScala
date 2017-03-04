@@ -1,4 +1,6 @@
 //test merges from branch_classes to master
+//test2 merges from branch_classes to master
+
 
 class ParentClass(val anyText: String){
   var anyInnerText: String = anyText
